@@ -4,4 +4,14 @@ Anemia levels in children has been a public health concern in most developing co
 Data resource: https://www.kaggle.com/datasets/adeolaadesina/factors-affecting-children-anemia-level/discussion/453573
 
 # Methodology: 
-Read and load data file, exploratory data analysis, including missing value and duplicated value checking; plotting each variable using seaborn barplot and histogram plot for continuous numerical variables. Followed by Label encoding of categorical data; target variable data distribution analysis; feature selection using variance threshold and correlation matrix. Create a lazy classifier to run all the relevant models for further analysis. Choose the best performed model for model training and accuracy evaluation. 
+•	Data preprocessing: missing value and duplicated value checking;
+•	Variables visualization: create seaborn barplot for categorical variables and histogram for continuous numerical variables;
+•	Label encoding of categorical variables;
+•	Feature selection: variance threshold and correlation matrix
+•	Chi square test for target variable-anemia level in children
+# Explanatory notes:
+For the dataset, there are two columns with the same name – anemia level. After initial knowledge search, it was found that Blood hemoglobin level is most common diagnostic test for anemia. However, no clear descriptive information was provided from the data provider. Then I performed the classification model to find out the matching columns for mom’s and children. The results showed that the ‘anemia level_2’ are perfectly predicted from the ‘Hemoglobin level adjusted for altitude (g/dl - 1 decimal)’. Then for the ‘anemia level’ is from mother’s sample, and strongly predicted from the ‘Hemoglobin level adjusted for altitude and smoking (g/dl - 1 decimal)’. 
+After clarifying these dataset questions, A chi square test was performed to identify the relationship between mothers' age, education level, wealth index, birth in the previous five years, use of mosquito net and the target variable: anemia levels in children. 
+# Conclusion: 
+It was found that ‘iron pills’ was significantly associated with the anemia level in children. 
+
